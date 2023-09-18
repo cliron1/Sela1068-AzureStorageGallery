@@ -1,0 +1,22 @@
+﻿@model List<string>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to my Gallery</h1>
+
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="img" multiple />
+        <button class="btn btn-primary">Upload</button>
+        <hr />
+    </form>
+    
+    <ul class="gallery d-flex justify-content-center gap-1">
+        @foreach(var url in Model) {
+            <li>
+                <img src="@url" alt="@url" />
+            </li>
+        }
+    </ul>
+</div>
