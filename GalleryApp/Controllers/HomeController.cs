@@ -9,7 +9,6 @@ namespace GalleryApp.Controllers;
 public class HomeController : Controller {
     private readonly IStorageService storage;
     private readonly ILogger<HomeController> logger;
-    private BlobContainerClient container;
 
     public HomeController(IStorageService storage, ILogger<HomeController> logger) {
         this.storage = storage;
