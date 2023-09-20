@@ -1,7 +1,16 @@
+using GalleryApp.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddSingleton<IStorageService, StorageService>();
+
+
+
+
+
 
 var app = builder.Build();
 
